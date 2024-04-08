@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatorial Recursiva - IA - 2024.1</title>
+</head>
+<body>
+
+<script>
+function fatorialRecursiva(numero) {
+  if (numero === 0 || numero === 1) {
+    return 1;
+  } else {
+    return numero * fatorialRecursiva(numero - 1);
+  }
+}
+
+const numero = prompt("Digite um número para calcular sua fatorial:");
+
+if (numero !== null && numero !== "") {
+  const numeroInt = parseInt(numero);
+
+  if (!isNaN(numeroInt)) {
+    const resultado = fatorialRecursiva(numeroInt);
+
+    console.log(`O fatorial de ${numeroInt} é ${resultado}`);
+  } else {
+    alert("Por favor, insira um número válido!");
+  }
+} else {
+  alert("Nenhum número inserido. A fatorial não pode ser calculada.");
+}
+</script>
+
+</body>
+</html>
